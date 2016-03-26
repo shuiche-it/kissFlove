@@ -37,6 +37,9 @@ router.get('/test', function(req, res) {
 router.get('/careBuy', function(req, res) {
   res.render('./WEB-INF/pageroot/reserve/careBuy');
 });
+router.get('/userRegist', function(req, res) {
+  res.render('./WEB-INF/pageroot/reserve/userRegist');
+});
 
 
 module.exports = router;
