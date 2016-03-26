@@ -1,0 +1,157 @@
+body, a, ul, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, img, p {
+  margin: 0;
+  padding: 0
+}
+
+body {
+}
+
+header {
+  img {
+    display: block;
+    border: none;
+    width: 100%
+  }
+}
+
+.care {
+  font-size: 14px;
+}
+.title {
+  color: #ABABAB;
+  border-bottom: 1px solid #e0e0e0
+}
+.name, .No {
+  line-height: 30px;
+  float: left
+}
+.name {
+  width: 30%
+}
+.No {
+  width: 70%
+}
+.title::after {
+  content: '';
+  display: block;
+  clear: both
+}
+.wrap {
+  padding: 0 10px;
+}
+.orderName {
+  position: relative;
+  min-height: 100px;
+  width: 100%;
+  display: table;
+  img {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    width: 78px;
+    height: 78px;
+    border-radius: 5px;
+  }
+  .information {
+    display: table-cell;
+    font-size: 12px;
+    vertical-align: middle;
+    padding-left: 100px;
+    p {
+      margin: 5px 0;
+    }
+    p[title] {
+      font-weight: 600;
+    }
+  }
+}
+
+.bodyInfo {
+  width: 70%;
+}
+.careInfo{
+  border-top: 5px solid #e0e0e0;
+  .orderName{
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+}
+.orderName::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.pay{
+  padding: 0 10px;
+  font-size:14px;
+  line-height: 25px;
+  color: #9e9e9e;
+  border-bottom:1px solid #e0e0e0;
+  margin-top: 12px;
+  .left{
+    float: left;
+  }
+  .right{
+    float:right;
+  }
+  p::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.line{
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background: #e0e0e0;
+  left: 5%;
+  top: 12px;
+  z-index: -1;
+}
+.step{
+  margin-top: 15px;
+  position: relative;
+  li{
+    list-style-type: none;
+    width: 16.66666666%;
+    float: left;
+  }
+  .stepList{
+    width: 20px;
+    height: 20px;
+    margin:  0 auto;
+    border:1px solid #e0e0e0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #ffffff;
+    position: relative;
+    font-size: 12px;
+    p{
+      position: absolute;
+      top: 23px;
+      left: -2px;
+      width: 24px;
+    }
+  }
+  .stepBg{
+    background: red;
+  }
+}
+footer {
+  a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    background: #ccc;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #7c87ff;
+    z-index: 10000;
+  }
+}

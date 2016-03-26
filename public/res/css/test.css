@@ -1,0 +1,51 @@
+.careItems {
+  background: #e0e0e0; }
+
+.careItemList {
+  width: 100%;
+  margin-bottom: 1px;
+  padding: 10px;
+  background: #ffffff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.acareItem::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.careItemImg {
+  width: 30%;
+  padding-bottom: 30%;
+  background-image: url("../../res/images/cycleCare/1b.png");
+  background-size: 100% 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: block;
+  border-radius: 50%; }
+
+.careItemDetails {
+  padding-left: 10px;
+  width: -webkit-calc(70% - 20px);
+  width: calc(70% - 20px);
+  text-align: center; }
+  .careItemDetails h3 {
+    font-size: 13px;
+    color: #636363; }
+  .careItemDetails p {
+    font-size: 12px;
+    line-height: 20px;
+    width: 70%;
+    background: #ececec;
+    border-radius: 10px;
+    margin: 5px auto;
+    color: #6D6D6D; }
+    .careItemDetails p span {
+      display: inline-block;
+      margin-left: 10px;
+      color: #7c87ff; }
+
+.pullLeft {
+  float: left; }
+
+/*# sourceMappingURL=test.css.map */

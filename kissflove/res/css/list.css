@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/* 驼峰命名法 */
+body {
+  font-family: 'Microsoft YaHei',arial,helvetica,sans-serif; }
+
+li {
+  list-style-type: none; }
+
+/* 顶部导航栏 */
+.headerNav {
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background: #CACACA; }
+
+.navBar {
+  /* ul */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1px 0 0 0;
+  background: #ffffff; }
+
+.navBar li {
+  list-style-type: none;
+  float: left;
+  width: 25%;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative; }
+
+.navBar li a {
+  color: #626262;
+  display: block;
+  -webkit-tap-highlight-color: transparent; }
+
+.navBar li::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background: #ececec;
+  position: absolute;
+  right: 0;
+  top: 14px; }
+
+.navBar li:last-child::after {
+  content: "";
+  width: 0; }
+
+.navBar:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.mainLine {
+  width: 90%;
+  height: 1px;
+  background: #000;
+  margin: 20px 0;
+  left: 5%;
+  position: relative; }
+
+.title {
+  color: red;
+  font-size: 13px;
+  font-weight: 500;
+  background: #fff;
+  position: absolute;
+  padding: 0 10px;
+  top: -10px;
+  left: 50%; }
+
+.main {
+  width: 100%;
+  background: #fff; }
+
+.mainList {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  margin-top: 10px; }
+
+.mainList:nth-child(odd) {
+  padding: 0 5px 0 10px; }
+
+.mainList:nth-child(even) {
+  padding: 0 10px 0 5px; }
+
+.main:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.mainList img {
+  display: inline-block;
+  width: 100%; }
+
+.main2:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.main3:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/* 周期护理 */
+.careItems {
+  background: #e0e0e0; }
+
+.careItemList {
+  margin-top: 1px;
+  padding: 0 10px;
+  background: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .careItemList img {
+    width: 100%; }
+
+.acareItem {
+  border-bottom: 2px solid #d3d3d3; }
+
+.acareItem::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.careItemImg {
+  width: 30%;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.careItemDetails {
+  padding-left: 10px;
+  width: calc(70% - 20px);
+  text-align: center; }
+  .careItemDetails h3 {
+    font-size: 13px;
+    color: #636363; }
+  .careItemDetails p {
+    font-size: 12px;
+    line-height: 20px;
+    width: 70%;
+    background: #ececec;
+    border-radius: 10px;
+    margin: 5px auto;
+    color: #6D6D6D; }
+    .careItemDetails p span {
+      display: inline-block;
+      margin-left: 10px;
+      color: #7c87ff; }
+
+.pullLeft {
+  float: left; }
+
+/* 底部分页导航 */
+footer, footer p {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 40px;
+  background: #df8fec;
+  border-top: 1px solid #CACACA; }
+
+footer a {
+  -webkit-tap-highlight-color: transparent; }
+
+footer a p {
+  float: left;
+  text-align: center;
+  line-height: 40px; }
+
+footer a:nth-child(1) p {
+  width: 15%;
+  border-right: 1px solid #CACACA; }
+
+footer a:nth-child(2) p {
+  width: 28.33%;
+  border-right: 1px solid #CACACA; }
+
+footer a:nth-child(3) p {
+  width: 28.33%;
+  border-right: 1px solid #CACACA; }
+
+footer a:nth-child(4) p {
+  width: 28.33%; }
+
+.footerBlock {
+  height: 40px; }
+
+.test {
+  width: auto;
+  background: red; }
+
+/* 项目列表 */
+.items {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #cccccc; }
+
+.option {
+  display: none; }
+
+.itemList {
+  position: relative;
+  background: #fff;
+  margin-top: 1px; }
+
+.aItem {
+  padding: 10px; }
+
+.aItem:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.itemImg {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30%; }
+
+.itemImg img {
+  display: block;
+  width: 100%;
+  border-radius: 5px; }
+
+.itemDetails {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 70%;
+  padding-left: 10px; }
+
+.itemDetails h3 {
+  font-size: 15px;
+  margin-left: -7px;
+  color: #626262;
+  font-weight: bold;
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.itemDetails .itemEffects {
+  font-size: 11px;
+  color: #acacac;
+  font-weight: normal;
+  height: 15px;
+  line-height: 15px;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.itemDetails .price {
+  margin-top: 10px;
+  height: 25px;
+  font-size: 18px;
+  color: #fe6672;
+  font-weight: 600;
+  line-height: 25px;
+  position: relative; }
+
+.itemDetails .price i {
+  font-size: 12px;
+  color: RED;
+  font-style: normal; }
+
+.itemDetails .price span {
+  font-size: 13px;
+  height: 25px;
+  line-height: 25px;
+  color: #CACACA;
+  font-weight: normal; }
+
+.itemDetails .shell {
+  color: #CACACA;
+  font-size: 12px;
+  float: right;
+  font-weight: normal; }
+
+.hide {
+  display: none; }
+
+/* 周期护理 */
+.foldHeader {
+  margin-top: 1px;
+  background: #ffffff;
+  padding: 10px;
+  height: 118px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: height .8s, padding .8s;
+  -moz-transition: height .8s, padding .8s;
+  -ms-transition: height 0.8s, padding 0.8s;
+  -o-transition: height .8s, padding .8s;
+  transition: height 0.8s, padding 0.8s; }
+
+.open {
+  position: absolute;
+  right: 10px;
+  bottom: 10px; }
+
+.fold {
+  overflow: hidden;
+  margin-top: 10px;
+  height: 118px;
+  -webkit-transition: height .8s;
+  -moz-transition: height .8s;
+  -ms-transition: height .8s;
+  -o-transition: height .8s;
+  transition: height .8s; }
+
+.foldBody {
+  background: #9fffce;
+  padding: 0 10px; }
+
+.foldImg {
+  width: 30%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px 0; }
+  .foldImg img {
+    width: 100%; }
+
+.foldItemDetails {
+  padding-left: 10px;
+  padding-top: 10px;
+  width: calc(70% - 20px); }
+  .foldItemDetails h3 {
+    font-size: 13px;
+    color: #636363; }
+  .foldItemDetails p {
+    font-size: 12px;
+    line-height: 20px;
+    color: #6D6D6D; }
+    .foldItemDetails p span {
+      display: inline-block;
+      margin-left: 2px;
+      color: #ff6a39; }
+
+/*# sourceMappingURL=list.css.map */
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.iconfontHome {
+  font-size: 20px;
+  top: 0;
+  color: #CACACA;
+  line-height: 38px;
+  display: block;
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-home:before {
+  content: "\e601"; }
+
+.icon-shouqi:before {
+  content: "\e607"; }
+
+.icon-zhankai:before {
+  content: "\e608"; }
+
+.icon-sousuo:before {
+  content: "\e600"; }
+
+/*# sourceMappingURL=list.css.map */

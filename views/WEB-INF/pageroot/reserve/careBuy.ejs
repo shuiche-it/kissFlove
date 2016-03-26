@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width,user-scalable=no">
+    <meta name="copyright" content="Copyright (c) 水车 2016">
+    <meta name="Keywords" content="花之吻，周期护理">
+    <meta name="description" content="花之吻（KISS FLOVE）美容连锁集团是一家专业从事女子SPA会所连锁经营大型集团公司">
+    <title>预约服务</title>
+    <link rel=" stylesheet" href = '../../../res/css/careBuy.css'>
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <div class="_order-name">
+        <img class="_order-picture" src="../../../res/images/careBuy/1b.png" alt="">
+        <div class="_order-information">
+            <!--如果不是套餐就把套餐名称滞空-->
+            <p title="套餐名称">7360套餐</p>
+            <p>项目名称</p>
+            <p><del>￥1288</del> <span class="_color-red">￥488</span></p>
+            <p>买4次送4次 <span class="_right">销量:49</span></p>
+            <p></p>
+        </div>
+    </div>
+</header>
+<div class="effect">
+    <h3 class="effect-title">项目功效</h3>
+    <p class="effect-txt">
+        按照CSS规范，浮动元素（float）后会被移出文档流，不会影响到块状盒子的布局而只会影响内联盒子（通常是文本）的排列，所以不会撑开父元素的高度。但是很多时候我们需要页面根据内容自动调整高度的。如何解决这个问题呢？有6个方法：
+    </p>
+</div>
+<div class="order">
+    <div class="time">
+        <div class="_form newList noBorder" id="chooseBeautician">
+            <label class="_label" for="">美容师</label>
+            <div class="_txt ">
+                <div id="chooseB">选择美容师</div>
+                <i class="iconfont icon-zhankai"></i>
+            </div>
+        </div>
+        <div class="_form new-list">
+            <label class="_label" for=""><i class="iconfont icon-chatPay"></i></label>
+            <div class="_txt ">
+                <div>微信支付<i class="iconfont icon-choose"></i></div>
+            </div>
+        </div>
+        <div class="_form new-list no-border">
+            <label class="_label" for="">合计</label>
+            <div class="_txt ">
+                <span class="_color-red">￥ 488</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <p class="clause"><input type="checkbox" checked="checked">我已阅读并同意<a href="">花之吻平台使用条款</a></p>
+    <p><span class="reminder">温馨提示</span>:服务开始前2小时内取消订单，将扣除您50%订单金额，以及已使用的优惠卷</p>
+</div>
+<aside id="beautician-layer" class="beautician-layer">
+    <ul class="_all">
+        <li class="_order-name js-order-name">
+            <img class="_order-picture" src="../../../res/images/careBuy/1b.png" alt="">
+            <div class="_order-information">
+                <dl>
+                    <dt>笑笑aaa</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_order-name js-order-name">
+            <img class="_order-picture" src="../../../res/images/careBuy/1b.png" alt="">
+            <div class="_order-information">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+    </ul>
+</aside>
+<footer>
+    <p>立即支付</p>
+</footer>
+<script src="../../../res/js/zepto.min.1.1.6.js"></script>
+<script>
+   $(function(){
+       init();// 初始化
+   })
+   /*初始化函数*/
+   function init(){
+        $('#chooseBeautician').on('tap',ClickBeautician)
+        $('.js-order-name').on('tap', ClickOrder )}
+   function ClickBeautician(){  // 遮罩层弹出
+        $('#beautician-layer').css('left',0);
+    }
+   function ClickOrder (){ //遮罩层退出
+        $('#beautician-layer').css('left','-100%');
+        $('#chooseB').html($(this).find('dt').html()); // 点击的内容添加到输入框
+    }
+</script>
+</body>
+</html>

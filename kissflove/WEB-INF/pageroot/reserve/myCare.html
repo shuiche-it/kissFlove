@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width,user-scalable=no">
+    <meta name="copyright" content="Copyright (c) 水车 2016">
+    <meta name="Keywords" content="花之吻，周期护理">
+    <meta name="description" content="花之吻（KISS FLOVE）美容连锁集团是一家专业从事女子SPA会所连锁经营大型集团公司">
+    <title>我的周期护理</title>
+    <link rel=" stylesheet" href = '../../../res/css/myCare.css'>
+    <!-- <link rel="stylesheet" type="text/css" href="at.alicdn.com/t/font_1456386232_3118882.css"> -->
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+<!--banner-->
+<div class="banner">
+    <a class="pic" href="#"><img src="../../../res/images/m4.png"/></a>
+</div>
+<!-- 列表 -->
+<ul class="all" id="all">
+    <li class="singleton">
+        <div class="click">
+            <a href="">
+                <!-- 左侧图片 -->
+                <div class="pictrue pull_left">
+                    <img src="../../../res/images/myCare/1b.png" alt="">
+                </div>
+                <!-- 右侧介绍 -->
+                <div class="_introduce introduce">
+                    <h3>舒乳通-排毒塑形</h3>
+                    <p>下单时间<time>2013-12-23 11:11</time></p>
+                    <p><span>共4次 余3次</span><span class="nt">再次预约</span></p>
+                </div>
+                <div class="show">
+                    <span>详情</span>
+                    <i class="iconfont icon-zhankai cue"></i>
+                </div>
+            </a>
+        </div>
+        <div class="next">
+            <div class="_singleton">
+                <a href="javascript:void (0)">
+                    <!-- 左侧图片 -->
+                    <div class="pictrue pull_left">
+                        <img src="../../../res/images/myCare/1b.png" alt="">
+                    </div>
+                    <!-- 右侧介绍 -->
+                    <div class="_introduce introduce nextIntroduce">
+                        <h3>下单时间<time>2013-12-23 11:11</time></h3>
+                        <p>评价:本次服务很满意，我很喜欢，我很喜欢，我很喜欢</p>
+                        <p><span>共4次 余3次</span></p>
+                        <div class="servicer">笑笑 <span><img src="../../../res/images/detail/comment/1b.png"></span></div>
+                        <div class="againOder">再次预约</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </li>
+
+</ul>
+<footer id="id">
+    <a href=""><p><i class="iconfontHome icon-home" style=""></i>　<!--　←这里有个空格不能删除，占位用　--></p></a>
+    <a href=""><p>分类</p></a>
+    <a href=""><p>最新</p></a>
+    <a href=""><p>我的订单</p></a>
+</footer>
+<div class="footerBlock"></div>
+</body>
+
+<script>
+    var KEY = [];
+    var H = [];
+    window.onload = function () {
+        var oSingleton = document.querySelectorAll('.singleton'); // li标签
+        var oNext = document.querySelectorAll('.next');
+        var oShow = document.querySelectorAll('.show');
+        var oAH = oSingleton[0].querySelector('a').offsetHeight;
+        var cue = document.querySelectorAll('.cue'); //展开合住小图标
+        console.log(cue.length);
+        for(var i=0; i<oShow.length; i++){
+            KEY.push(0);
+            H.push(oNext[i].offsetHeight);
+            oShow[i].index = i;
+            //设置每个选项卡的高度；
+            oSingleton[i].style.height = oAH + 'px';
+            //选项卡被点击后的效果
+            oShow[i].onclick = function(){
+                show(this.index, cue, oSingleton, oAH);
+                stopDefault(event)
+            };
+        }
+    };
+    function show (num, obj, obj2,h){
+        // 0 是展开，1是合住；
+        if(KEY[num] == 0){
+            for(var j =0; j< obj2.length; j++){
+                obj2[j].style.height = h + 'px';
+                KEY[j] = 0;
+                obj[j].style.webkitTransform = "rotate(180deg)";
+                obj[j].style.mozTransform= "rotate(180deg)";
+                obj[j].style.msTransform = "rotate(180deg)";
+                obj[j].style.oTransform = "rotate(180deg)";
+                obj[j].style.transform = "rotate(180deg)";
+            }
+            obj[num].style.webkitTransform = "rotate(0deg)";
+            obj[num].style.mozTransform= "rotate(0deg)";
+            obj[num].style.msTransform = "rotate(0deg)";
+            obj[num].style.oTransform = "rotate(0deg)";
+            obj[num].style.transform = "rotate(0deg)";
+
+            KEY[num] = 1;
+            obj2[num].style.height = H[num] + h + 'px';
+            return
+        }
+        if(KEY[num] == 1){
+            obj[num].style.webkitTransform = "rotate(180deg)";
+            obj[num].style.mozTransform= "rotate(180deg)";
+            obj[num].style.msTransform = "rotate(180deg)";
+            obj[num].style.oTransform = "rotate(180deg)";
+            obj[num].style.transform = "rotate(180deg)";
+            KEY[num] = 0;
+            obj2[num].style.height = h + 'px';
+            return
+        }
+    }
+    function stopBubble(e) {
+        //如果提供了事件对象，则这是一个非IE浏览器
+        if ( e && e.stopPropagation )
+        //因此它支持W3C的stopPropagation()方法
+            e.stopPropagation();
+        else
+        //否则，我们需要使用IE的方式来取消事件冒泡
+            window.event.cancelBubble = true;
+    }
+    //阻止浏览器的默认行为
+    function stopDefault( e ) {
+        //阻止默认浏览器动作(W3C)
+        if ( e && e.preventDefault )
+            e.preventDefault();
+        //IE中阻止函数器默认动作的方式
+        else
+            window.event.returnValue = false;
+        return false;
+    }
+</script>
+</html>
