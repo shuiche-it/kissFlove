@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no" >
+    <title>评价</title>
+    <link rel="stylesheet" href="../../../res/css/evaluation.css">
+    <script src="../../../res/js/zepto.min.1.1.6.js"></script>
+    <script>
+        var $html = $('html');
+        $html.css('font-size',$html.width()/12)
+    </script>
+</head>
+<style>
+    body{
+        font-size: 16px;
+    }
+</style>
+<body>
+<header>
+    <div class="item">
+        <img src="../../../res/images/evaluation/1b.png" alt="">
+        <div class="detailsWrap">
+            <div class="details">
+                <p class="title">舒乳通-通径熟络</p>
+                <time>下单时间:2016-2-22 16:3:3</time>
+                <p class="other">评价剩余时间:2天</p>
+                <p class="shop">门店:企业壹号店<span class="people">笑笑<img class="peopleImg" src="../../../res/images/evaluation/1b.png" alt=""></span></p>
+
+            </div>
+        </div>
+    </div>
+</header>
+<form class="wrap" action="" name="">
+
+    <dl class="squareWarp">
+        <dt class="squareTitle">美容师评价</dt>
+        <dd class="squareList"><div class="square"><i class="iconfont"></i></div>好评</dd>
+        <dd class="squareList"><div class="square"><i class="iconfont"></i></div>一般</dd>
+        <dd class="squareList"><div class="square"><i class="iconfont"></i></div>差评</dd>
+    </dl>
+    <div class="txtWrap">
+        <label for="txt">您的评价</label><br/>
+        <textarea id="txt" placeholder="点击输入您的评价"></textarea>
+    </div>
+    <input class="btn" type="submit" value="提交评价"/>
+</form>
+<script>
+    var json = {
+        'square': null,
+        'star': null,
+        'txt':null
+    };
+    $(function () {
+        var $squareList = $('.squareList');
+        var $square = $squareList.find('.square');
+        $squareList.on('tap', function () {
+            $square.find('i').removeClass('icon-duigou');
+            $(this).find('i').addClass('icon-duigou');
+        });
+        $('#txt').change(function(){
+            json.txt = $('#txt').text();
+            console.log(json.txt);
+        });
+        $('#test').attr('value', $('html').css('font-size'))
+    });
+
+</script>
+</body>
+</html>

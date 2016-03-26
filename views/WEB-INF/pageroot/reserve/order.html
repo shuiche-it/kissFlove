@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width,user-scalable=no">
+    <meta name="copyright" content="Copyright (c) 水车 2016">
+    <meta name="Keywords" content="花之吻，周期护理">
+    <meta name="description" content="花之吻（KISS FLOVE）美容连锁集团是一家专业从事女子SPA会所连锁经营大型集团公司">
+    <title>预约服务</title>
+    <link rel=" stylesheet" href = '../../../res/css/order.css'>
+    <title>Title</title>
+</head>
+<body>
+<div class="banner">
+    <ul class="_all">
+        <li class="_singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce">
+                <h3 class="monicker">项目名字 <span>￥ 488</span></h3>
+                <p class="itd"><i class="iconfont icon-time"></i> 60分钟</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="order">
+    <nav class="nav">
+        <a href="javascript: void (0)"><del>上门服务</del></a>
+        <a href="javascript: void (0)">到店服务</a>
+        <div class="navLine">
+            <div class="navBg">
+            </div>
+        </div>
+    </nav>
+    <div class="address">
+        <div class="_form newList noBorder">
+            <label class="_label" for="">预约地址</label>
+            <div class="_txt">
+                <div class="chooseAddress">选择地址</div>
+                <i class="iconfont icon-zhankai"></i>
+            </div>
+        </div>
+    </div>
+    <div class="time">
+        <div class="_form newList" id="chooseTime">
+            <label class="_label" for="">服务时间</label>
+            <div class="_txt ">
+                <div class="chooseTime">选择预约时间</div>
+                <i class="iconfont icon-zhankai"></i>
+            </div>
+        </div>
+        <div class="_form newList noBorder" id="chooseBeautician">
+            <label class="_label" for="">美容师</label>
+            <div class="_txt ">
+                <div class="chooseB">选择美容师</div>
+                <i class="iconfont icon-zhankai"></i>
+            </div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="_form newList">
+            <label class="_label" for="">联系人</label>
+            <div class="_txt ">
+                <input type="text" value="水车">
+            </div>
+        </div>
+        <div class="_form newList">
+            <label class="_label" for="">联系电话</label>
+            <div class="_txt ">
+                <input type="tel" value="12345678901" pattern="/^\d*/">
+            </div>
+        </div>
+        <div class="_form newList">
+            <label class="_label" for="">优惠卷</label>
+            <div class="_txt ">
+                <p>没有可使用的优惠价</p>
+            </div>
+        </div>
+        <div class="_form newList">
+            <label class="_label" for="">备注</label>
+            <div class="_txt ">
+                <input type="text" placeholder="如对某产品过敏">
+            </div>
+        </div>
+        <div class="_form newList noBorder">
+            <label class="_label" for="">合计</label>
+            <div class="_txt ">
+                ￥ 488
+            </div>
+        </div>
+    </div>
+    <div class="pay">
+        <div class="_form newList">
+            <label class="_label" for=""><i class="iconfont icon-chatPay"></i></label>
+            <div class="_txt ">
+                <div>微信支付<i class="iconfont icon-choose"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <p class="clause"><input type="checkbox" checked="checked">我已阅读并同意<a href="">花之吻平台使用条款</a></p>
+    <p><span class="reminder">温馨提示</span>:服务开始前2小时内取消订单，将扣除您50%订单金额，以及已使用的优惠卷</p>
+</div>
+<aside class="addressLayer" id="addressLayer">
+    <nav>
+        <!-- ABC导航搜索栏 -->
+        <ul id="addressNav" class="addressNav">
+        </ul>
+    </nav>
+
+    <!--<ul>
+        &lt;!&ndash; A &ndash;&gt;
+        <li class="ABC">A</li>
+        <li class="addressList">
+            <p>A标签下的店铺列表</p>
+        </li>
+    </ul>
+    <ul>
+        &lt;!&ndash; A &ndash;&gt;
+        <li class="ABC">A</li>
+        <li class="addressList">
+            <p>A标签下的店铺列表</p>
+        </li>
+    </ul>-->
+</aside>
+<aside class ='timeLayer' id="timeLayer">
+    <div class="layer"></div>
+    <div id="J_nav" class="mui_tabs">
+        <div class="dataBox">
+            <div id="leftBtn" class="leftBtn"><span class="leftBtn_Span"></span></div>
+            <div class="data_cen">
+                <ul id="data_ul" class="data_ul">
+                    <li class="date_choose"><span>第一天</span></li>
+                    <li><span>第二天</span></li>
+                    <li><span>第三天</span></li>
+                    <li><span>第四天</span></li>
+                    <li><span>第五天</span></li>
+                    <li><span>第六天</span></li>
+                    <li><span>第七天</span></li>
+                    <li><span>第八天</span></li>
+                    <li><span>第九天</span></li>
+                    <li><span>第十天</span></li>
+                </ul>
+            </div>
+            <div id="rightBtn" class="rightBtn"><span class="rightBtn_Span"></span></div>
+        </div>
+        <div id="timeBox" class="timeBox" style="display: block;">
+            <ul class="time_ul">
+                <li class="continue">9:00</li>
+                <li class="continue">10:00</li>
+                <li class="continue">11:00</li>
+                <li class="continue">12:00</li>
+                <li class="continue">13:00</li>
+                <li class="continue">14:00</li>
+                <li class="continue">15:00</li>
+                <li class="continue">16:00</li>
+                <li class="continue">17:00</li>
+                <li class="continue">18:00</li>
+                <li class="continue">19:00</li>
+                <li class="continue">20:00</li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<aside class="beauticianLayer">
+    <ul class="_all">
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑aaa</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+        <li class="_singleton singleton">
+            <!-- 左侧图片 -->
+            <div class="_pictrue _pull_left">
+                <img src="../../../res/images/order/1b.png" alt="">
+            </div>
+            <!-- 右侧介绍 -->
+            <div class="_introduce introduce">
+                <dl>
+                    <dt>笑笑</dt>
+                    <!-- 最多54字, 最少19个字 -->
+                    <dd>说明说明说明说明说明说明明说明说明说说明说明说明说明说明说明说明说明说明说明</dd>
+                    <dd><span><i class="iconfont icon-chengjiao"></i> 成交 888</span><span class="evaluate"><i class="iconfont icon-pingjia"></i>好评率(100%)</span> </dd>
+                </dl>
+            </div>
+        </li>
+    </ul>
+</aside>
+<footer>
+    <p>立即下单</p>
+</footer>
+<script src="../../../res/js/jquery-2.1.4.min.js"></script>
+<script>
+
+    $(function () {
+        //do something...
+        var ABC = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','0','P','Q','R','S','T','U','V','W','X','Y','Z'];
+        // 店铺名字
+        var address = [
+            [
+            'A标签下的第一家店',
+            'A标签下的第一家店',
+            'A标签下的第一家店',
+            'A标签下的第一家店'], //A
+            ['B标签下的第一家店',
+            'B标签下的第一家店',
+            'B标签下的第一家店',
+            'B标签下的第一家店',
+            'B标签下的第一家店'],//B
+            [],//C
+            ['D标签下的第一家店',
+            'D标签下的第一家店',
+            'D标签下的第一家店',
+            'D标签下的第一家店',
+            'D标签下的第一家店'],//D
+            [],//E
+            [],//F
+            [],//G
+            [],//H
+            [],//I
+            [],//J
+            [],//K
+            [],//L
+            [],//M
+            [],//N
+            [],//O
+            [],//P
+            [],//Q
+            [],//R
+            [],//S
+            [],//T
+            [],//U
+            [],//V
+            [],//W
+            [],//X
+            [],//Y
+            []];//Z
+        var $addressNav = $('#addressNav');
+        for(var i =0; i<26; i++){
+            $addressNav.append($('<li>' + ABC[i] + '</li>'));
+            var $ul = $('<ul></ul>');
+            var $liABC = $('<li>' + ABC[i] +' </li>');
+            $liABC.attr('class','ABC');
+            $ul.append($liABC);
+            if(address[i].length === 0){
+                continue
+            }
+            for(var j = 0; j<address[i].length; j++){
+                var $li = $('<li></li>');
+                $li.attr('class', 'addressList');
+                $li.append(address[i][j]);
+                $ul.append($li)
+            }
+            $('#addressLayer').append($ul);
+        }
+    });
+    $(function () {
+        $('.address').bind('click', function () {
+            $('#addressLayer').css('left',0)
+        });
+        $('.addressList').bind('click', function () {
+            $('#addressLayer').css('left', '-100%');
+            var $html = $(this).html();
+            $('.chooseAddress').html($html);
+        });
+
+        $('#chooseBeautician').bind('click', function () {
+            $('.beauticianLayer').css('left',0)
+        });
+        $('.singleton').bind('click', function () {
+            $('.beauticianLayer').css('left','-100%');
+            $('.chooseB').html($(this).find('dt').html());
+        })
+    });
+    var arr = [];
+    $(function () { // 时间选择
+        var $ul = $('#data_ul');
+        var $dateLi = $ul.find('li');
+        var $w = $('.data_cen').width();
+        var $liW = $w * 0.33333333333333333;
+
+        chooseTime();
+
+        $dateLi.bind('click', function () {
+            $dateLi.attr('class','');
+            $(this).attr('class','date_choose');
+            $('.time_ul').find('li').addClass('continue');
+            chooseTime();
+        });
+        $ul.css('width',$dateLi.length * $liW);
+        $dateLi.css('width',$liW);
+        var $beginUlLeft = $ul.offset().left;
+        var $beginUlRight = $ul.offset().left - $dateLi.width()*($dateLi.length - 3);
+
+        $('#leftBtn').bind('click', function () {
+            if($ul.offset().left <= $beginUlRight){
+                return
+            }else {
+                $ul.offset({left:$ul.offset().left - $dateLi.width()});
+                var $index = $ul.find('.date_choose').index();
+                $dateLi.attr('class','');
+                $dateLi.eq($index+1).attr('class','date_choose');
+            }
+        });
+        $('#rightBtn').bind('click', function () {
+            if($ul.offset().left >= $beginUlLeft){
+                console.log('right return了');
+                return
+            }else{
+                $ul.offset({left:$ul.offset().left + $dateLi.width()});
+                var $index = $ul.find('.date_choose').index();
+                $dateLi.attr('class','');
+                $dateLi.eq($index-1).attr('class','date_choose');
+            }
+        });
+        $('#chooseTime').on('click', function () {
+            $('body').css('overflow','hidden');
+            $('.timeLayer').css('top',0)
+        });
+        console.log($('.date_choose').text());
+
+        function chooseTime (){
+            /* 时间删除样式 */
+            arr = [1,3,5];
+            var $continue = $('.continue');
+            for(var i=0; i<arr.length; i++){
+                $continue.eq(arr[i]).removeClass('continue');
+            }
+            /* 时间控制 */
+
+            $continue = $('.continue');
+            $continue.on('click', function () {
+                console.log($(this).text());
+                $('.timeLayer').css('top','100%');
+                $('.chooseTime').html($('.date_choose').text() +' '+ $(this).text());
+                $('body').css('overflow','visible');
+            });
+            $('.layer').bind('click', function () {
+                $('.timeLayer').css('top','100%');
+                $('body').css('overflow','visible');
+            })
+        }
+    });
+</script>
+</body>
+</html>
