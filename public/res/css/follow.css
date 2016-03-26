@@ -9,10 +9,7 @@ header h3 {
   line-height: 40px; }
 
 article img {
-  width: 98%;
-  padding: 0 1%;
-  height: 400px;
-  background: #cccccc; }
+  width: 100%; }
 
 footer img {
   width: 98%;

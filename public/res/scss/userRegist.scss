@@ -1,4 +1,103 @@
-body,p,ul,li{
+@font-face {
+    font-family: 'iconfont';
+    src: url('../../res/font/iconfont.eot'); /* IE9*/
+    src: url('../../res/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../../res/font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../../res/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../../res/font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+body,p,ul,li,img,input{
     margin: 0;
     padding: 0;
 }
+input{
+    border:1px solid #fa55e9;
+    text-indent: 30px;
+}
+input:focus{
+   /* -webkit-box-shadow: 0 0 1px #fa55e9;
+            box-shadow: 0 0 1px #fa55e9;*/
+    outline: none;
+    border:1px solid #fa55e9;
+    background: #ffffff;
+    text-indent: 30px;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.btn-save{
+    width: 80%;
+    margin-left:10%;
+    margin-top: 20px;
+    height: 40px;
+    line-height:40px;
+    background-color: #f36cbe;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    text-indent:0;
+}
+.logo{
+    width: 100%;
+}
+.cue{
+    font-size: 12px;
+    color: #e9e9e9;
+    border-bottom:1px solid #e0e0e0;
+    line-height:22px;
+    padding:0 5px;
+}
+article{
+    padding: 0 20px;
+}
+.mobile-warp,.mobile-valid-code-wrap{
+    position: relative;
+    width: 90%;
+    margin:0 auto;
+}
+$iconfontW:30px;
+.mobile-label,.mobile-valid-code-label{ // 字体图标
+    position: absolute;
+    width: $iconfontW;
+    height: 42px;
+    line-height: 42px;
+    top: 15px;
+    left: 0;
+}
+$magin:15px;
+.mobile,.mobile-valid-code{
+    width: 100%;
+    font-size: 14px;
+    line-height: 40px;
+    margin:$magin 0;
+}
+.mobile-valid-code{
+    width: calc(100% - 110px);
+    width: -webkit-calc(100% - 110px);
+}
+.get-code{
+    text-indent:0;
+    position: absolute;
+    right: -1px;
+    bottom: $magin;
+    width: 100px;
+    height: 42px;
+    background: #f36cbe;
+    color: #ffffff;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    color: #909090;
+}
+.icon-shoujihaoma:before { content: "\e625"; }
+.icon-yanzhengma:before { content: "\e622"; }
