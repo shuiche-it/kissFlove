@@ -24,7 +24,20 @@
         url('../../../res/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
         url('../../../res/font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
     }
-
+    .acareItem{
+        position: relative;
+    }
+    .buy{
+        position: absolute;
+        bottom: 10px;
+        right:10px;
+        font-size: 12px;
+        background: #f9eaf9;
+        color: #f372b4;
+        padding:3px 5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
 </style>
 
 <body>
@@ -230,6 +243,7 @@
                 </div>
                 <div class="foldBody">
                     <!-- 手风琴内容都在这里 -->
+
                     <a href="javascript:void (0)" title="7360箴言护理">
                         <div class="acareItem">
                             <div class="foldImg pullLeft">
@@ -242,6 +256,7 @@
                                 <p>套餐价 ￥<span>5380</span></p>
                                 <p>丰姿通韵套餐<span>30次</span></p>
                             </div>
+                            <div class="buy">立即预约</div>
                         </div>
                     </a>
                     <a href="javascript:void (0)" title="7360箴言护理">
@@ -488,7 +503,7 @@
         </div>
     </div>
 </div>
-<footer id="id">
+<footer>
     <a href=""><p><i class="iconfontHome icon-home" style=""></i>　<!--　←这里有个空格不能删除，占位用　--></p></a>
     <a href=""><p>分类</p></a>
     <a href=""><p>最新</p></a>

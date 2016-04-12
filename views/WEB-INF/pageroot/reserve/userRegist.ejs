@@ -16,30 +16,62 @@
     <img class="logo" src="../../../res/images/userRegist/logo.png" alt="">
     <p class="cue">请输入您的手机号,便于我们更好地为您提供服务。谢谢！</p>
 </header>
+<div id="public-layer" class="public-layer">
+    请输入手机号码!
+</div>
 <article>
     <form id="fm" method="post"  enctype="multipart/form-data" novalidate>
         <!-- 获取手机号码 -->
         <section class="mobile-warp">
             <label for="mobile" class="mobile-label"><i class="iconfont icon-shoujihaoma"></i></label>
-            <input class="mobile" type="tel" pattern="/^\d*/" placeholder="请输入手机号码" id="mobile" name="mobile">
+            <input class="mobile" type="tel" pattern="1[0-9]{10}" maxlength="11" placeholder="请输入手机号码" id="mobile" name="mobile">
         </section>
         <!-- 获取验证码 -->
         <section class="mobile-valid-code-wrap">
             <input type='button' value='获取验证码' class="get-code">
             <label class="mobile-valid-code-label" for="mobileValidCode"><i class="iconfont icon-yanzhengma"></i></label>
-            <input class="mobile-valid-code" type="tel" pattern="/^\d*/" placeholder="输入手机验证码" id="mobileValidCode" name="mobileValidCode"/>
+            <input class="mobile-valid-code" type="tel" pattern="[0-9]{6}" maxlength="6" placeholder="输入手机验证码" id="mobileValidCode" name="mobileValidCode"/>
+        </section>
+        <!-- 邀请手机号码 -->
+        <section id="id"  class="mobile-warp regist-show">
+            <label for="mobile" class="mobile-label"><i class="iconfont icon-shoujihaoma"></i></label>
+            <input class="mobile" type="tel" pattern="1[0-9]{10}" maxlength="11" placeholder="请输入手机号码" id="mobile" name="mobile">
         </section>
         <!-- 注册按钮 -->
         <section>
-            <input type="button" class="btn-save" value="注册" id="btnSave" onclick="save()">
         </section>
     </form>
+    <input type="submit" class="btn-save" value="注册" id="btnSave">
+
 </article>
 <script type="text/javascript" src='../../../res/js/jquery-2.1.4.min.js'></script>
 <script>
-    $(function(){
-        $.messager.alert("错误", "请输入6位验证码!");
-    })
+    var isRecommend = true;
+    if(isRecommend){
+        $('#id').css('display','block');
+    }
+    $('#public-layer').css('display','block').css('opacity','1');
+    setTimeout(function () {
+        $('#public-layer').css('opacity','0');
+    },1000)
+    setTimeout(function () {
+        $('#public-layer').css('display','none');
+    },1600)
+    /* 弹出提示框，替代alert */
+    function showPublicLayer (str){
+        var obj = $('#public-layer');
+        obj.text(str);
+        obj.css('display','block').css('opacity','1');
+        setTimeout(function () {
+            obj.css('opacity','0');
+        },1000);
+        setTimeout(function () {
+            obj.css('display','none');
+        },1600);
+    }
+    setInterval(function () {
+
+    },1000);
 
 </script>
 </body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport"  content="width=device-width,user-scalable=no">
+    <meta name="copyright" content="Copyright (c) 水车 2016">
+    <meta name="Keywords" content="花之吻，关于我们">
+    <meta name="description" content="花之吻（KISS FLOVE）美容连锁集团是一家专业从事女子SPA会所连锁经营大型集团公司">
+    <meta name="format-detection" content="telphone=no" />
+    <link rel="stylesheet" href="../../../res/css/invite.css">
+    <title>邀请好友</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<header>
+    <p>
+        <span id="back" class="back">返回</span>
+        <span id="use" class="use">邀请好友</span>
+    </p>
+</header>
+<div id="header-bg" class="header-bg"></div>
+<div id="use-layer" class="use-layer">
+    <div class="use-layer-wrap">
+        <img src="../../../res/images/self/invite.png" alt="">
+    </div>
+</div>
+<div >
+    <img class="invite-img" src="../../../res/images/self/banner.jpg" alt="">
+</div>
+<div class="info">
+    <p>邀请好友首次注册</p>
+    <p>这里是示例文字这里是示例文字这里是示例文字</p>
+    <p>这里是示例文字这里是示例文字这里是示例文字</p>
+    <p>这里文字这里是示例文字这里是示例文字这里是示例文字</p>
+    <p>这里是示文字这里是示例文字</p>
+    <p>这里是示例文字这里是示例文字这里是示例文字</p>
+    <p>这里是示例文字</p>
+</div>
+<div id="invite-btn" class="invite-btn">邀请好友</div>
+</body>
+<script>
+    window.onload = function () {
+        var oBack = document.querySelector('#back');
+        var oUse = document.querySelector('#use');
+        var oUseLayer = document.querySelector('#use-layer');
+        var oHeaderBg = document.querySelector('#header-bg');
+        var oInviteBtn = document.querySelector('#invite-btn');
+        var keyUse = true;
+        oBack.addEventListener('touchstart', function () {
+            window.location.href = './self'
+        },false);
+        oUse.addEventListener('touchstart', function () {
+            if(keyUse) {
+                oUseLayer.style.webkitTransform = 'translateY(0)';
+                oUseLayer.style.transform = 'translateY(0)';
+                oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 1)'
+                keyUse=false;
+
+            }else{
+                oUseLayer.style.webkitTransform = 'translateY(-100%)';
+                oUseLayer.style.transform = 'translateY(-100%)';
+                oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 0)'
+                keyUse= true;
+            }
+        },false);
+        oUseLayer.addEventListener('touchstart', function () {
+            oUseLayer.style.webkitTransform = 'translateY(-100%)';
+            oUseLayer.style.transform = 'translateY(-100%)';
+            oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 0)'
+            keyUse= true;
+        },false);
+        oInviteBtn.addEventListener('touchstart',function () {
+            if(keyUse) {
+                oUseLayer.style.webkitTransform = 'translateY(0)';
+                oUseLayer.style.transform = 'translateY(0)';
+                oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 1)'
+                keyUse=false;
+
+            }else{
+                oUseLayer.style.webkitTransform = 'translateY(-100%)';
+                oUseLayer.style.transform = 'translateY(-100%)';
+                oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 0)'
+                keyUse= true;
+            }
+        },false)
+    }
+    /*function alertLayer (keyUse,oUseLayer,oHeaderBg ) {
+        if(keyUse) {
+            oUseLayer.style.webkitTransform = 'translateY(0)';
+            oUseLayer.style.transform = 'translateY(0)';
+            oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 1)'
+            keyUse=false;
+
+        }else{
+            oUseLayer.style.webkitTransform = 'translateY(-100%)';
+            oUseLayer.style.transform = 'translateY(-100%)';
+            oHeaderBg.style.backgroundColor = 'rgba(255, 255, 255, 0)'
+            keyUse= true;
+        }
+    }*/
+</script>
+</html>

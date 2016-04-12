@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    var headerBack = function (a) {
+        a = a ||{};
+        var obj = {
+            backUrl: a.backUrl || window.history.go(-1), // 返回按钮要跳转的链接
+            leftTxt : a.leftTxt || '返回', // 导航栏左侧的文字
+            rightTxt : a.rightTxt || null, // 导航栏右侧的文字
+            centerTxt : a.centerTxt || null, //导航栏中间的文字
+            color: a.color || '#000000',  // 字体颜色
+            backgroundColor : a.backgroundColor || 'rgba(0,0,0,0)' // 必须用raba写法写，切最开始透明度为0
+        };
+        // 创建html样式层
+        var wrap = function(){
+            // 创建标签
+            var header = document.createElement('header');
+            header.id = 'zzx-header';
+            var spanLeft = document.createElement('span');
+            spanLeft.id = 'zzx-leftSpan';
+            var spanCenter = document.createElement('span');
+            spanCenter.id = 'zzx-centerSpan';
+            var spanRight = document.createElement('span');
+            spanRight.id = 'zzx-rightSpan';
+
+            //开始添加层级布局
+            spanLeft.innerHTML = obj.leftTxt;
+            header.appendChild(spanLeft);
+            if(obj.centerTxt){
+                spanCenter.innerHTML = obj.centerTxt;
+                header.appendChild(spanCenter);
+            }
+            if(obj.rightTxt){
+                spanRight.innerHTML = obj.rightTxt;
+                header.appendChild(spanRight);
+            }
+            return header;
+        };
+        // 把创建好的样式添加到页面
+        var body = document.getElementsByTagName('body')[0];
+        body.appendChild(wrap());
+        // 设置添加dom的样式
+        (function setStyle (){
+            var oHeader = document.getElementById('zzx-header');
+            oHeader.style.color = obj.color;
+            oHeader.style.backgroundColor = obj.backgroundColor;
+        })();
+        // 添加返回按钮点击事件
+        (function backClick (){
+            var oLeftSpan = document.getElementById('zzx-leftSpan');
+            oLeftSpan.addEventListener('touchstart', function () {
+                console.log('aaa');
+                window.location.href = obj.backUrl;
+            })
+        })();
+    };
+</script>
+<style type="text/css">
+    body,span{
+        margin: 0;
+        padding: 0;}
+    #zzx-header{
+        font-size: 14px;
+        position:relative;
+        height: 44px;
+        text-align: center;
+    }
+    #zzx-leftSpan,#zzx-rightSpan{
+        position: absolute;
+        line-height: 44px;
+        padding:0 10px;
+    }
+    #zzx-leftSpan{
+        left: 0px;
+        top: 0;
+    }
+    #zzx-rightSpan{
+        right: 0px;
+        top: 0;
+    }
+    #zzx-centerSpan{
+        display: inline-block;
+        line-height: 44px;
+    }
+</style>
+<body>
+<script>
+    headerBack({
+        backUrl : 'http://www.baidu.com', // 返回按钮要跳转的链接
+        leftTxt : '返回', // 导航栏左侧的文字
+        rightTxt : '分享', // 导航栏右侧的文字
+        color:'blue',
+        backgroundColor:'rgba(0, 0, 0, .5)'
+    })
+</script>
+</body>
+</html>

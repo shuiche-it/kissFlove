@@ -65,12 +65,12 @@
         <div class="step">
             <div class="line"></div>
             <ul>
-                <li><div class="stepList stepBg"><p>已经下单</p></div></li>
-                <li><div class="stepList stepBg"><p>支付成功</p></div></li>
-                <li><div class="stepList"><p>已经出发</p></div></li>
-                <li><div class="stepList"><p>开始服务</p></div></li>
-                <li><div class="stepList"><p>服务完成</p></div></li>
-                <li><div class="stepList"><p>客户评价</p></div></li>
+                <li><div class="js-step-list  stepList"><p>已经下单</p></div></li>
+                <li><div class="js-step-list  stepList"><p>支付成功</p></div></li>
+                <li><div class="js-step-list  stepList"><p>已经出发</p></div></li>
+                <li><div class="js-step-list  stepList"><p>开始服务</p></div></li>
+                <li><div class="js-step-list  stepList"><p>服务完成</p></div></li>
+                <li><div class="js-step-list  stepList"><p>客户评价</p></div></li>
             </ul>
         </div>
     </div>
@@ -79,12 +79,48 @@
     <a href="./orderList">返回</a>
 </footer>
 <script>
+    var orderStatus = '1003';
     $(function () { // window.onload
         init();
+        determineStep()
     })
     function init(){ //初始化函数
 
     }
+    // 判断到了哪一步了
+    function determineStep(){
+        var stepList = $('.js-step-list');
+        var stepNum = 0;
+        // 已经下单1001，已经支付1003，已经确认 1004，已经到达（开始服务） 1006,  已离开(结束服务）1007，已经结单1008
+        switch (orderStatus){
+            case '1001':
+                stepNum=1;
+                break;
+            case '1003':
+                stepNum=2;
+                break
+            case '1004':
+                stepNum=3;
+                break
+            case '1006':
+                stepNum=4;
+                break
+            case '1007':
+                stepNum=5;
+                break
+            case '1008':
+                stepNum=6;
+                break
+            default:
+                console.log('都不是');
+                stepNum = 0;
+        }
+        stepList.removeClass('stepBg');
+        for(var i=0; i< stepNum; i++){
+            stepList.eq(i).addClass('stepBg');
+        }
+    }
+
 </script>
 <div style="height: 120px;"> </div>
 </body>

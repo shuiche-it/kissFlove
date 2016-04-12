@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div>
+        <!-- 左侧图片 -->
+        <div class="_pictrue _pull_left">
+            <img src="<%=request.getContextPath()%>/res/images/order/1b.png" alt="">
+        </div>
+        <!-- 右侧介绍 -->
+        <div class="_introduce">
+            <h3 class="monicker">${bservice.bserviceName}  <span>￥ ${bservice.realPrice}</span></h3>
+            <p >${poName}</p>
+            <p class="itd"><i class="iconfont icon-time"></i> ${bservice.timeRequired}分钟</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -66,13 +66,14 @@ header {
     padding: 0 0 10px 0; }
   .squareWarp .squareList {
     float: left;
-    width: 3rem;
+    width: 2.5rem;
     position: relative;
-    text-align: center;
     margin-left: .5rem;
     line-height: .7rem;
-    font-size: 14px; }
+    font-size: 14px;
+    padding-left: 12px; }
   .squareWarp .square {
+    left: -10px;
     position: absolute;
     width: .7rem;
     height: .7rem;

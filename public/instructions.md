@@ -13,8 +13,11 @@ orderList.html : 已下订单的列表
 orderInfo.html ：订单详情
 follow.html:关注页面
 careBuy.html:周期项目购买
-    {
-        
+self.html 个人中心
+    feedback.html意见反馈
+    coupon.html 优惠卷
+    changePhone.html 修改注册电话
+    { 
         css规范写法
             命名用a-b方式命名
             不用嵌套太深
@@ -32,9 +35,11 @@ careBuy.html:周期项目购买
     底部分割线 ： #e0e0e0
     标题颜色： #6D6D6D;
     说明颜色：'
-    footer:{
-       背景色：#f9eaf9
-       文字：f372b4
+        孙琳给的颜色：
+        footer:{
+           背景色：#f9eaf9
+           文字：f372b4
+           color:#f372b4;
 }
 再次预约:的color＃f45c7c,border:#f3708c
 banner

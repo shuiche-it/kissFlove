@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width,user-scalable=no">
+    <meta name="copyright" content="Copyright (c) 水车 2016">
+    <meta name="Keywords" content="花之吻，关于我们">
+    <meta name="description" content="花之吻（KISS FLOVE）美容连锁集团是一家专业从事女子SPA会所连锁经营大型集团公司">
+    <link rel="stylesheet" href="../../../res/css/coupon.css">
+    <title>优惠卷</title>
+    <style type="text/css">
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <p><span id="back" class="back">返回</span>优惠卷<span id="use" class="use">使用说明</span></p>
+    </header>
+    <div id="use-layer" class="use-layer">
+        <div class="use-layer-text">
+            <h4>1:如何使用优惠卷</h4>
+            <p>答:就那样使用啊</p>
+            <h4>2:如何使用优惠卷</h4>
+            <p>答:就那样使用啊</p>
+            <h4>3:如何使用优惠卷</h4>
+            <p>答:就那样使用啊</p>
+            <h4>4:如何使用优惠卷</h4>
+            <p>答:就那样使用啊</p>
+        </div>
+    </div>
+    <div class="coupon-warp">
+        <ul>
+            <li class="coupon-list">
+                <div class="list-header">
+                    <!--优惠卷或者体验卷-->
+                    <p>优惠卷<span>丨<span>某个项目的0元体验</p>
+                </div>
+                <div class="list-info">
+                    <div class="money">￥<i>50</i></div>
+                    <div class="text">这里是说明>这里是说明</div>
+                </div>
+                <div class="list-footer">
+                    使用期限:
+                    <time>2015.11.11-2016.11.11</time>
+                    <div class="btn-info js-btn-info">详细信息<i class="iconfont icon-zhankai2"></i></div>
+                </div>
+                <div class="info-layer js-info-layer">
+                    <p>使用说明：此优惠卷你在<a href="" title="首页的链接">首页</a>选择项目后，下单的时候会自动使用</p>
+                    <p>优惠卷过期后将无法使用</p>
+                    <p>一个项目只能使用一张优惠卷</p>
+                </div>
+            </li>
+            <li class="coupon-list">
+                <div class="list-header">
+                    <!--优惠卷或者体验卷-->
+                    <p>优惠卷<span>丨<span>某个项目的0元体验</p>
+                </div>
+                <div class="list-info">
+                    <div class="money">￥<i>50</i></div>
+                    <div class="text">这里是说明>这里是说明</div>
+                </div>
+                <div class="list-footer">
+                    使用期限:
+                    <time>2015.11.11-2016.11.11</time>
+                    <div class="btn-info js-btn-info">详细信息<i class="iconfont icon-zhankai2"></i></div>
+                </div>
+                <div class="info-layer js-info-layer">
+                    <p>使用说明：此优惠卷你在<a href="" title="首页的链接">首页</a>选择项目后，下单的时候会自动使用</p>
+                    <p>优惠卷过期后将无法使用</p>
+                    <p>一个项目只能使用一张优惠卷</p>
+                </div>
+            </li>
+            <li class="coupon-list">
+                <div class="list-header">
+                    <!--优惠卷或者体验卷-->
+                    <p>优惠卷<span>丨<span>某个项目的0元体验</p>
+                </div>
+                <div class="list-info">
+                    <div class="money">￥<i>50</i></div>
+                    <div class="text">这里是说明>这里是说明</div>
+                </div>
+                <div class="list-footer">
+                    使用期限:
+                    <time>2015.11.11-2016.11.11</time>
+                    <div class="btn-info js-btn-info">详细信息<i class="iconfont icon-zhankai2"></i></div>
+                </div>
+                <div class="info-layer js-info-layer">
+                    <p>使用说明：此优惠卷你在<a href="" title="首页的链接">首页</a>选择项目后，下单的时候会自动使用</p>
+                    <p>优惠卷过期后将无法使用</p>
+                    <p>一个项目只能使用一张优惠卷</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var oBtnInfo = document.querySelectorAll('.js-btn-info');
+        var oInfoLayer = document.querySelectorAll('.js-info-layer');
+        var oBack = document.querySelector('#back');
+        var oUse = document.querySelector('#use');
+        var oUseLayer = document.querySelector('#use-layer');
+        var key = true;// 开关
+        var useKey = true;// 开关2
+        for(var i=0; i<oBtnInfo.length; i++){
+            (function (i) {
+                oBtnInfo[i].addEventListener('touchstart',function(){
+                    if(key){
+                        oInfoLayer[i].style.display = 'block';
+                        key = false
+                    }else {
+                        oInfoLayer[i].style.display = 'none';
+                        key = true;
+                    }
+                },false)
+            })(i)
+        }
+        oBack.addEventListener('touchstart', function () {
+            window.location.href = './self';
+        },false)
+        oUse.addEventListener('touchstart', function () {
+            if(useKey) {
+                oUseLayer.style.webkitTransform = 'translateY(0)';
+                oUseLayer.style.transform = 'translateY(0)';
+                useKey=false;
+            }else{
+                oUseLayer.style.webkitTransform = 'translateY(-100%)';
+                oUseLayer.style.transform = 'translateY(-100%)';
+                useKey= true;
+            }
+        },false);
+        oUseLayer.addEventListener('touchstart', function () {
+            oUseLayer.style.webkitTransform = 'translateY(-100%)';
+            oUseLayer.style.transform = 'translateY(-100%)';
+            useKey= true;
+        },false)
+    }
+</script>
+</html>

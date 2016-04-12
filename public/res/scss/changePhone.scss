@@ -15,10 +15,12 @@ input{
     text-indent: 30px;
 }
 input:focus{
-   /* -webkit-box-shadow: 0 0 1px #fa55e9;
-            box-shadow: 0 0 1px #fa55e9;*/
+    /* -webkit-box-shadow: 0 0 1px #fa55e9;
+             box-shadow: 0 0 1px #fa55e9;*/
     outline: none;
     border:1px solid #fa55e9;
+   /* background: #ffffff;
+    text-indent: 30px;*/
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 .btn-save{
@@ -36,13 +38,13 @@ input:focus{
 .logo{
     width: 100%;
 }
-.cue{
+/*.cue{
     font-size: 12px;
     color: #e9e9e9;
     border-bottom:1px solid #e0e0e0;
     line-height:22px;
     padding:0 5px;
-}
+}*/
 article{
     padding: 0 20px;
 }
@@ -85,30 +87,11 @@ $magin:15px;
     font-size: 14px;
     border-radius: 5px;
 }
-.regist-show{
-    display: none;
-}
-.public-layer{
-    position: fixed;
-    width: 150px;
-    height: 50px;
-    font-size:12px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.45);
-    top: 30%;
-    left: 50%;
-    margin-left:-75px;
-    border-radius: 5px;
-    color: #ffffff;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding:5px;
-    opacity:0;
-    display: none;
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-    -webkit-transition: all .5s;
-            transition: all .5s;
+.back{
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 10px;
+    line-height: 30px;;
 }
 .iconfont {
     font-family:"iconfont" !important;

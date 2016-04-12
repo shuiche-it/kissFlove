@@ -15,6 +15,10 @@ router.get('/evaluation', function(req, res) {
   res.render('./WEB-INF/pageroot/reserve/evaluation');
 });
 
+router.get('/list', function(req, res) {
+  res.render('./WEB-INF/pageroot/reserve/list');
+});
+
 router.get('/orderList', function(req, res) {
   res.render('./WEB-INF/pageroot/reserve/orderList');
 });
@@ -41,5 +45,23 @@ router.get('/userRegist', function(req, res) {
   res.render('./WEB-INF/pageroot/reserve/userRegist');
 });
 
+router.get('/self', function(req, res) {
+    res.render('./WEB-INF/pageroot/self/self');
+});
 
+router.get('/feedback', function(req, res) {
+    res.render('./WEB-INF/pageroot/self/feedback');
+});
+router.get('/coupon', function(req, res) {
+    res.render('./WEB-INF/pageroot/self/coupon');
+});
+router.get('/changePhone', function(req, res) {
+    res.render('./WEB-INF/pageroot/self/changePhone');
+});
+router.get('/score', function(req, res) {
+    res.render('./WEB-INF/pageroot/self/score');
+});
+router.get('/invite', function(req, res) {
+    res.render('./WEB-INF/pageroot/self/invite');
+});
 module.exports = router;
